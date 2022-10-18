@@ -2,7 +2,7 @@ import { component$, useContextProvider, useStore } from '@builder.io/qwik';
 import {  NavigationContext } from '~/components/L';
 import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
-import mockData from "../../public/mockData.json";
+import mockData from "../../public/data.json";
 
 import "../components/img-galery.css";
 import "./content.css"
