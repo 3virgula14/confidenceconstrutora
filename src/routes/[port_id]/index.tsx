@@ -38,7 +38,7 @@ export default component$(() => {
         </div>
       </RLogo>
       {c_data!=undefined?
-      
+  
       <RPortfolio 
       descs={c_data.descs}
       photos={c_data.photos}
