@@ -24,7 +24,7 @@ export default component$(() => {
   const derivedDataKeys = Object.keys(derivedData);
   const indexedData = derivedDataKeys[derivedDataKeys.indexOf(state.dataType as string)]
   const c_data = derivedData[indexedData][parseInt(state.dataIndex)-1]; //todo: link mockData and dataType together
-  console.log(c_data)
+
   return (
     <div id="whole">
       <RLogo 
@@ -37,11 +37,14 @@ export default component$(() => {
           <a> Portfólio </a>
         </div>
       </RLogo>
+      {c_data!=undefined?
+      
       <RPortfolio 
-        descs={c_data.descs}
-        photos={c_data.photos}
-        title={c_data.title}
+      descs={c_data.descs}
+      photos={c_data.photos}
+      title={c_data.title}
       />
+      : null}
     </div>
   );
 });
