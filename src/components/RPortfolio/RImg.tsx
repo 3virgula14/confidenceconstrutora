@@ -8,6 +8,7 @@ export interface RImgProps {
 
 export default component$((props: RImgProps) => {
     const {d, index} = props
+    console.log(d)
     return (
         <div 
           className={`item `} 
