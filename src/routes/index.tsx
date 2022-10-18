@@ -56,8 +56,7 @@ export default component$(() => {
 });
 
 export async function getData():Promise<string>{
-  const resp = await fetch("data.json");
+  const resp = await fetch("/data.json");
   const json = await resp.json();
-  console.log("getData", json)
   return json;
 }
