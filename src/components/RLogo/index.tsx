@@ -47,7 +47,7 @@ export default  component$((props: RLogoProps) => {
                     <a style="color: #222;
                         text-decoration: none;"   href="/porfolio">Portfólio</a></div>
                 
-                <title>{(props.data[parseInt(props.location)-1] || {title:""}).title}</title>
+                <title>{(props.data[parseInt(props.location)-1] || {[props.dataIndexAttribute]:""})[props.dataIndexAttribute]}</title>
                 <span style={{
                         alignItems: "center",
                         display: "flex",
