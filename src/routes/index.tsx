@@ -44,7 +44,7 @@ export default component$(() => {
             </RLogo>
         
             <RPortfolio 
-            descs={c_data.descs}
+            descs={c_data.sessions}
             photos={c_data.photos}
             title={c_data.title}
             /></>
