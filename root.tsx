@@ -9,7 +9,6 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <title>Confidence Construtora</title>
-        <link rel="icon" type="image/png" href="/favicon.png" />
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </head>
       <body lang="pt-br">
