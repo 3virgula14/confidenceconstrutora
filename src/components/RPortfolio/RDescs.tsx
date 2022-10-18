@@ -1,6 +1,6 @@
 import { component$, } from '@builder.io/qwik';
 import md from 'markdown-it';
-import { Desc } from '../../types';
+import { Desc } from '../../../types';
 import "./RDescs.css"
 
 export interface RDescsProps {

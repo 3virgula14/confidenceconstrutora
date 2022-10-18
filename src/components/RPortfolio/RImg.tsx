@@ -1,5 +1,5 @@
 import { component$, } from '@builder.io/qwik';
-import {PortfolioImgGlryPhoto} from '../../types'
+import {PortfolioImgGlryPhoto} from '../../../types'
 
 export interface RImgProps {
     index: number,
