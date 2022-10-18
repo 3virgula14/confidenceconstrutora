@@ -40,7 +40,7 @@ export default component$(() => {
       photos={c_data.photos}
       title={c_data.title}
       />
-      : null}
+      : <div style={{height:"400px"}}></div>}
     </div>
   );
 });
