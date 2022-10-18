@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Trade Gothic';
+  src: url('Trade\ Gothic\ LT.ttf');
+}
+@font-face {
+  font-family: 'DNI';
+  src: url('dni_bigfontsite.com.ttf');
+}
+
+body {
+  font-family: 'Trade Gothic';
+  padding: 0px;
+  margin: 0px;
+}
+
 /**
  * WHAT IS THIS FILE?
  *
@@ -5,7 +20,7 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
-
+/* 
 :root {
   --qwik-dark-blue: #006ce9;
   --qwik-light-blue: #18b6f6;
@@ -13,11 +28,7 @@
   --qwik-dark-purple: #713fc2;
 }
 
-body {
-  background-color: #fafafa;
-  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  padding: 20px 20px 40px 20px;
-}
+
 
 main {
   max-width: 760px;
@@ -115,11 +126,11 @@ a.mindblow {
   border-bottom: 4px solid black;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤯</text></svg>")
       16 0,
-    auto; /*!emojicursor.app*/
+    auto; 
 }
 
 a.mindblow:hover {
   border-bottom-width: 0px;
   margin-bottom: 4px;
   transform: translateY(4px);
-}
+} */

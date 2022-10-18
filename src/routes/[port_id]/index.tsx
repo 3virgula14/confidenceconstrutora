@@ -1,16 +1,19 @@
 import { component$, useContextProvider, useStore } from '@builder.io/qwik';
+import { useLocation } from '@builder.io/qwik-city';
 import {  NavigationContext } from '~/components/L';
 import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
-import mockData from "../../public/mockData.json";
+import mockData from "../../../public/mockData.json";
 
-import "../components/img-galery.css";
-import "./content.css"
+import "../../components/img-galery.css";
+import "../content.css"
 
 export default component$(() => {
   
+  const location = useLocation();
+  
   const state = useStore({
-    dataIndex: "1",
+    dataIndex: location.params.port_id,
     dataIndexAttribute: "title",
     dataType: "portfolio"
   })
