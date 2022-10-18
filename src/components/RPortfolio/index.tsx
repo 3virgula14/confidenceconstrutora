@@ -1,11 +1,8 @@
-import { component$, useStore,
-    useContextProvider,
-    createContext, } from '@builder.io/qwik';
-import { Desc, PortfolioImgGlryPhoto } from '~/types';
+import { component$,  } from '@builder.io/qwik';
+import { Desc, PortfolioImgGlryPhoto } from '../../types';
 import R from '../R';
 import RDescs from './RDescs';
 import RImgGlry from './RImgGlry';
-import RTitle from './RTitle';
 
 export interface RPortfolioProps{
   title: string,

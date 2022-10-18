@@ -1,8 +1,6 @@
-import { component$, useStore,
-    useContext,
+import { component$,  useContext,
     } from '@builder.io/qwik';
-import { LogoRestModeProps } from '~/types';
-import { LogoRestModeContext, NavigationContext, PageTypes, PortfolioPageProps } from '../L';
+import { NavigationContext} from '../L';
 
 
 export interface RLogoProps{
@@ -23,8 +21,7 @@ import "./styles.css";
 export default  component$((props: RLogoProps) => {   
 
 
-    let NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
-    let tes = NavigatorLocalState.dataIndex;
+    const NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
     const handleHrefLimites = (portifolioIndex:number) => {
         if(portifolioIndex<=0 || portifolioIndex>=props.data.length) return "#"
         return `${portifolioIndex}`
@@ -72,8 +69,8 @@ export default  component$((props: RLogoProps) => {
             
             <div id="img">
             <img onClick$={(e)=> {
-                let parentNode = ((e.target as HTMLElement).parentNode as any)
-                let contains = parentNode.classList.contains("activated");
+                const parentNode = ((e.target as HTMLElement).parentNode as any)
+                const contains = parentNode.classList.contains("activated");
                 parentNode.classList[`${contains? "remove": "add"}`]("activated");
                 
             }} src={"favicon.png"} />
