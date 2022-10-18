@@ -23,7 +23,7 @@ export default component$(() => {
   const derivedData = JSON.parse(JSON.stringify(mockData))
   const derivedDataKeys = Object.keys(derivedData);
   const indexedData = derivedDataKeys[derivedDataKeys.indexOf(state.dataType as string)]
-  const c_data = derivedData[indexedData][parseInt(state.dataIndex)]; //todo: link mockData and dataType together
+  const c_data = derivedData[indexedData][parseInt(state.dataIndex)-1]; //todo: link mockData and dataType together
   console.log(c_data)
   return (
     <div id="whole">
