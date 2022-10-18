@@ -2,7 +2,6 @@ import { component$, useContextProvider, useStore } from '@builder.io/qwik';
 import {  NavigationContext } from '~/components/L';
 import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
-import mockData from "../../public/data.json";
 
 import "../components/img-galery.css";
 import "./content.css"
@@ -17,7 +16,7 @@ export default component$(() => {
 
   useContextProvider(NavigationContext, state);
   
-  const derivedData = JSON.parse(JSON.stringify(mockData))
+  const derivedData = JSON.parse(JSON.stringify(getData()))
   const derivedDataKeys = Object.keys(derivedData);
   const indexedData = derivedDataKeys[derivedDataKeys.indexOf(state.dataType as string)]
   const c_data = derivedData[indexedData][parseInt(state.dataIndex)]; //todo: link mockData and dataType together
@@ -44,3 +43,10 @@ export default component$(() => {
     </div>
   );
 });
+
+export async function getData():Promise<string>{
+  const resp = await fetch("data.json");
+  const json = await resp.json();
+  console.log("getData", json)
+  return json;
+}
