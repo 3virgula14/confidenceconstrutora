@@ -56,7 +56,7 @@ export default component$(() => {
 });
 
 export async function getData():Promise<string>{
-  const resp = await fetch("/data.json");
+  const resp = await fetch("https://www.construtoraconfidence.com/data.json");
   const json = await resp.json();
   return json;
 }
