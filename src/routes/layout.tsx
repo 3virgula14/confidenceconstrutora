@@ -12,7 +12,7 @@ export default component$(() => {
       <div className="cartao">
         
         <div className="campos">
-          <img src="uploads/24467-5-engineer-file.png" alt="" />
+          <img src="/uploads/24467-5-engineer-file.png" alt="" />
           <div>
             <input type="text" placeholder={"Seu nome"} />
             <input type="email" placeholder={"Seu email"}/>

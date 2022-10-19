@@ -31,20 +31,11 @@ export default  component$((props: RLogoProps) => {
         <div id="LogoNavigator">
             <div id="bar">
                 
-                <div id="nav_links"
-                    style="
-                        width: 200px;
-                        display: flex;
-                        justify-content: space-between;
-                        border-right: 2px solid #333333e6;
-                        padding-right: 26px;
-                        pointer-events: all;
-                    "
-                    >
-                    <a style="color: #222;
+                <div id="nav_links">
+                    <a style="color: #9d9d9d;
                         text-decoration: none;" href="/sobre">Quem Somos</a>
-                    <a style="color: #222;
-                        text-decoration: none;"   href="/porfolio">Portfólio</a></div>
+                    <a style="color: #9d9d9d;
+                        text-decoration: none;"   href="/portfolio">Portfólio</a></div>
                 
                 <title>{(props.data[parseInt(props.location)-1])["titulo"]}</title>
                 <span style={{
@@ -72,7 +63,7 @@ export default  component$((props: RLogoProps) => {
                 const contains = parentNode.classList.contains("activated");
                 parentNode.classList[`${contains? "remove": "add"}`]("activated");
                 
-            }} src={"favicon.png"} />
+            }} src={"/favicon.png"} />
             </div>
         </div>
     )
