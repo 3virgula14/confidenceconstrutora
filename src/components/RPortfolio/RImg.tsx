@@ -30,12 +30,12 @@ export default component$((props: RImgProps) => {
                 }
               }
             }}
-          src={d.src} alt={d.caption} />
+          src={d.foto} alt={d.shortstory} />
           <span style={{pointerEvents: 'none'}}>
             <caption>
-              {d.caption}
+              {d.shortstory}
             </caption>
-            {d.full_desc}
+            {d.tailstory}
           </span>
         </div>
         )

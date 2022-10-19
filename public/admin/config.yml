@@ -33,7 +33,7 @@ collections:
           - {label: "MD Session", name: "mdsession", widget: "markdown"}
               
       - label: "Story"
-        name: story,
+        name: story
         widget: "object"
         fields:
           - {label: "Descrição curta", name: "twitterlike", widget: "text"}

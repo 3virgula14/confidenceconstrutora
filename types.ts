@@ -1,14 +1,20 @@
 export interface PortfolioImgGlryPhoto{
-    src: string,
-    caption: string,
-    full_desc: string
+    foto: string,
+    titulo: string,
+    shortstory: string,
+    tailstory: string,
+    mdsession: string,
 }
 
-export interface Desc {
-    sessionTitle: string,
-    text: string
-}
-
+export interface RPortfolioProps{
+    titulo: string,
+    sessions: Array<PortfolioImgGlryPhoto>,
+    story : {
+      twitterlike: string,
+      "2paraph": string
+    }
+  }
+  
 export type LogoRestModeProps = {
     activated: boolean
 }

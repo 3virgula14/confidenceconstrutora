@@ -40,9 +40,9 @@ export default component$(() => {
       {c_data!=undefined?
   
       <RPortfolio 
-      descs={c_data.descs}
-      photos={c_data.photos}
-      title={c_data.title}
+      story={c_data.story}
+      sessions={c_data.sessions}
+      titulo={c_data.title}
       />
       : null}
     </div>

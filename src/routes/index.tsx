@@ -2,6 +2,7 @@ import { component$, Resource, useContextProvider, useResource$, useStore } from
 import {  NavigationContext } from '~/components/L';
 import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
+import {  RPortfolioProps } from '../../types';
 
 import "../components/img-galery.css";
 import "./content.css"
@@ -29,7 +30,7 @@ export default component$(() => {
           const derivedData = JSON.parse(JSON.stringify(data))
           const derivedDataKeys = Object.keys(derivedData);
           const indexedData = derivedDataKeys[derivedDataKeys.indexOf(state.dataType as string)]
-          const c_data = derivedData[indexedData][parseInt(state.dataIndex)]; //todo: link mockData and dataType together
+          const c_data = derivedData[indexedData][parseInt(state.dataIndex)] as RPortfolioProps; //todo: link mockData and dataType together
           return (
           <>
             <RLogo 
@@ -44,9 +45,9 @@ export default component$(() => {
             </RLogo>
         
             <RPortfolio 
-            descs={c_data.sessions}
-            photos={c_data.photos}
-            title={c_data.title}
+            sessions={c_data.sessions}
+            story={c_data.story}
+            titulo={c_data.titulo}
             /></>
         )}}
         />

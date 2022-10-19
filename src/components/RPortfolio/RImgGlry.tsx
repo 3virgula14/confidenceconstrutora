@@ -4,15 +4,15 @@ import RImg from './RImg';
 
 
 interface RImgGlryProps {
-  photos: Array<PortfolioImgGlryPhoto>
+  sessions: Array<PortfolioImgGlryPhoto>
 } 
 
 export default component$((props: RImgGlryProps) => {
-  if(!props.photos)
+  if(!props.sessions)
     return (<></>)
   return(
     <div id="img-galery">
-      {props.photos.map((d:PortfolioImgGlryPhoto, index:number) => <RImg d={d} index={index}/>)}
+      {props.sessions.map((d:PortfolioImgGlryPhoto, index:number) => <RImg d={d} index={index}/>)}
     </div>
   )
 });
