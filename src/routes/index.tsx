@@ -30,7 +30,7 @@ export default component$(() => {
           const derivedDataKeys = Object.keys(derivedData);
           const indexedData = derivedDataKeys[derivedDataKeys.indexOf(state.dataType as string)]
           const c_data = derivedData[indexedData][parseInt(state.dataIndex)] as RPortfolioProps; //todo: link mockData and dataType together
-          console.log(">>>",data, Object.keys(c_data));
+          console.log(">>>",data, Object.keys(data));
           return (
           <>
             <RLogo 
