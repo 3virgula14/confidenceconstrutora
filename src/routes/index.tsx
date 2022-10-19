@@ -27,7 +27,6 @@ export default component$(() => {
         onResolved={(data) =>{ 
           const derivedData = JSON.parse(JSON.stringify(data));
           const c_data = derivedData["portfolio"][parseInt(state.dataIndex)-1] 
-          console.log("<<<<<", state, c_data)
           return (
           <>
             <RLogo 

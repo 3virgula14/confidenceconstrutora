@@ -11,7 +11,7 @@ export default component$((props: RPortfolioProps) => {
     return(
       <R>
         <RImgGlry q:slot='landing' sessions={props.sessions} />
-        <RDescs q:slot='content' story={props.story}/>
+        <RDescs q:slot='content' story={props.story} sessions={props.sessions}/>
       </R>
       )
 

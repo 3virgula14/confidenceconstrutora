@@ -8,7 +8,6 @@ export interface RImgProps {
 
 export default component$((props: RImgProps) => {
     const {d, index} = props
-    console.log(d)
     return (
         <div 
           className={`item `} 
@@ -17,10 +16,9 @@ export default component$((props: RImgProps) => {
           <img 
             onClick$={(e:MouseEvent) => {
               if(e.target){
-                let test:boolean = false;
                 const parentElement = (e.target as HTMLDivElement).parentElement;
                 if(parentElement){
-                  test = parentElement.classList.contains("actived")
+                  const test = parentElement.classList.contains("actived")||false;
                   parentElement.classList[`${!test ? "add": "remove"}`]("actived") 
                   if(!test) {
                     const imgGlr = document.querySelector("#img-galery")

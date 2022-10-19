@@ -2,7 +2,17 @@ section {
   font-size: 14px;
   line-height: 18px;
   padding: 4vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   }
+
+section > *{
+  max-width: 768px;
+  width: 100%;
+  margin-inline: auto;
+}
   
   section:first-child {
     background: #ededed;
