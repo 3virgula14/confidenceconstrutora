@@ -26,6 +26,7 @@ export default component$(() => {
         onPending={() => <>Loading...</>}
         onRejected={(error) => <>Error: {error.message}</>}
         onResolved={(data) =>{ 
+          console.log("<<<<<", data, typeof data)
           const derivedData = JSON.parse(data);
           const derivedDataKeys = Object.keys(derivedData);
           const indexedData = derivedDataKeys[derivedDataKeys.indexOf(state.dataType as string)]
