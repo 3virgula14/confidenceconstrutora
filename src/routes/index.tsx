@@ -26,11 +26,11 @@ export default component$(() => {
         onPending={() => <>Loading...</>}
         onRejected={(error) => <>Error: {error.message}</>}
         onResolved={(data) =>{ 
-          const derivedData = JSON.parse(JSON.stringify(data))
+          const derivedData = data;
           const derivedDataKeys = Object.keys(derivedData);
           const indexedData = derivedDataKeys[derivedDataKeys.indexOf(state.dataType as string)]
           const c_data = derivedData[indexedData][parseInt(state.dataIndex)] as RPortfolioProps; //todo: link mockData and dataType together
-          console.log(">>>",data, data[state.dataIndexAttribute]);
+          console.log(">>>",c_data);
           return (
           <>
             <RLogo 
