@@ -29,7 +29,7 @@
     width: 100%;
     height: 100vh!important;
 }
-#img-galery .item>img {
+#img-galery .item>img, #img-galery .item>video {
     object-fit: cover;
     width: 100%;
     height: 100%;

@@ -10,7 +10,7 @@
     pointer-events: none;
     backdrop-filter: saturate(2.5) blur(6px);
     transition: all 0.25s;
-    background-color: #e2ddda;
+    background-color: hsl(22.5, 12.1%, 87.1%);
 }
 
 #LogoNavigator.lowpage{
@@ -42,7 +42,7 @@
 
 title{
     display: block;
-    font-size: 12pt;
+    font-size: 10pt;
     padding-inline: 30px;
     color: #202020;
     font-family: 'Gothic A1', sans-serif;
@@ -67,29 +67,20 @@ title{
 
 
 #LogoNavigator #img{
-    border-radius: 10px;
     position: absolute;
-    top: -2px;
     left: 33px;
-    width: 5vw;
-    height: 9vh;
-    opacity: 0.85;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     display: flex;
-    transition: height 0.25s, width 0.25s;
+    transition: all 0.25s;
     z-index: 400000;
     pointer-events: all;
-}
-
-#LogoNavigator #img:hover{
-    transform: scale(1.05);
-    opacity: 1;
+    clip-path: polygon(0px 0px, 50px 0px, 50px 50px, 0px 50px);
     cursor: pointer;
 }
 
 #LogoNavigator #img.activated {
-    width: 100vw;
-    height: 100vh;
     top: 0px;
     left: 0px;
     background-color: #e2ddda;
@@ -97,21 +88,20 @@ title{
     border-radius: 0px;
     display: flex;
     align-items: center;
+    transition: all 0.25s;
     justify-content: center;
-}
-
-
-#LogoNavigator #img img{
-    position: absolute;
-    width: 159%;
-    left: -30%;
-    top: -15%;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
 }
 
 #LogoNavigator #img.activated img {
+    width: 300px;
+}
+#LogoNavigator #img.activated ul{
+    margin-left: 30%;
+}
+
+#LogoNavigator #img img{
     position: absolute;
-    width: 40%;
-    left: 10%;
-    top: 15%;
+    width: 50px;
 }
 

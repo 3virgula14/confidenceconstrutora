@@ -1,6 +1,7 @@
 import { component$, useContext,
     } from '@builder.io/qwik';
 import { NavigationContext} from '../L';
+import LogoArea from './LogoArea';
 
 
 export interface RLogoProps{
@@ -32,6 +33,7 @@ export default  component$((props: RLogoProps) => {
                         alignItems: "center",
                         flexDirection: "row",
                         gap: "3px",
+                        display: "flex",
                         cursor: "pointer",
                         pointerEvents: "all"}}>
 
@@ -59,14 +61,7 @@ export default  component$((props: RLogoProps) => {
                 </span>
             </div>
             
-            <div id="img" class="activated">
-            <img onClick$={(e)=> {
-                const parentNode = ((e.target as HTMLElement).parentNode as any)
-                const contains = parentNode.classList.contains("activated");
-                parentNode.classList[`${contains? "remove": "add"}`]("activated");
-                
-            }} src={"/favicon.png"} />
-            </div>
+            <LogoArea/>
         </div>
     )
 })
