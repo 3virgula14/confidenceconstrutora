@@ -36,7 +36,11 @@ export default  component$((props: RLogoProps) => {
                         pointerEvents: "all"}}>
 
                     <span onClick$={() => {
-                            NavigatorLocalState.dataIndex = (NavigatorLocalState.dataIndex<=0 || NavigatorLocalState.dataIndex>props.data.length)? 0 : (NavigatorLocalState.dataIndex - 1)
+                            console.log("NavigatorLocalState.dataIndex", NavigatorLocalState.dataIndex)
+                            if(NavigatorLocalState.dataIndex>1)
+                                NavigatorLocalState.dataIndex = (NavigatorLocalState.dataIndex - 1)
+                            else
+                                NavigatorLocalState.dataIndex = props.data.length
                         }
                     }>
                         <svg style={{transform: "rotate(180deg)"}} class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -44,7 +48,10 @@ export default  component$((props: RLogoProps) => {
                     <span>{parseInt(props.location)}/{props.data.length}</span>
                     
                     <span onClick$={() => {
-                            NavigatorLocalState.dataIndex = (NavigatorLocalState.dataIndex<=0 || NavigatorLocalState.dataIndex>props.data.length)? 0 : (NavigatorLocalState.dataIndex + 1)
+                            if(NavigatorLocalState.dataIndex<props.data.length)
+                                NavigatorLocalState.dataIndex = (NavigatorLocalState.dataIndex + 1)
+                            else
+                                NavigatorLocalState.dataIndex = 1
                         }
                     }>
                         <svg class="wh-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
