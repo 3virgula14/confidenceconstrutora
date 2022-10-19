@@ -8,7 +8,7 @@ import "./content.css"
 export default component$(() => {
   
   const state = useStore({
-    dataIndex: "1",
+    dataIndex: 1,
     dataIndexAttribute: "title",
     dataType: "portfolio"
   })
@@ -25,7 +25,7 @@ export default component$(() => {
         onRejected={(error) => <>Error: {error.message}</>}
         onResolved={(data) =>{ 
           const derivedData = JSON.parse(JSON.stringify(data));
-          const c_data = derivedData["portfolio"][parseInt(state.dataIndex)-1] 
+          const c_data = derivedData["portfolio"][state.dataIndex -1] 
           return (
           <>
             <RLogo 
