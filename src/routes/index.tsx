@@ -2,7 +2,6 @@ import { component$, Resource, useContextProvider, useResource$, useStore } from
 import {  NavigationContext } from '~/components/L';
 import RLogo from '~/components/RLogo';
 import RPortfolio from '~/components/RPortfolio';
-import {  RPortfolioProps } from '../../types';
 
 import "../components/img-galery.css";
 import "./content.css"

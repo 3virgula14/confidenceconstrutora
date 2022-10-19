@@ -1,6 +1,6 @@
-import { component$,  useContext,
+import { component$,
     } from '@builder.io/qwik';
-import { NavigationContext} from '../L';
+//import { NavigationContext} from '../L';
 
 
 export interface RLogoProps{
@@ -10,23 +10,22 @@ export interface RLogoProps{
     location: string,
 }
 
- interface NavigatorStateStruct {
-    dataIndex: number,
-    dataIndexAttribute: string,
-    dataType: string
-  }
+//  interface NavigatorStateStruct {
+//     dataIndex: number,
+//     dataIndexAttribute: string,
+//     dataType: string
+//   }
 
 import "./styles.css";
 
 export default  component$((props: RLogoProps) => {   
 
 
-    const NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
+    //const NavigatorLocalState:NavigatorStateStruct = useContext(NavigationContext) as NavigatorStateStruct;
     const handleHrefLimites = (portifolioIndex:number) => {
         if(portifolioIndex<=0 || portifolioIndex>props.data.length) return "#"
         return `${portifolioIndex}`
     }
-    console.log("tes", NavigatorLocalState)
     
     return (
         <div id="LogoNavigator">
@@ -67,7 +66,7 @@ export default  component$((props: RLogoProps) => {
                 </span>
             </div>
             
-            <div id="img">
+            <div id="img" class="activated">
             <img onClick$={(e)=> {
                 const parentNode = ((e.target as HTMLElement).parentNode as any)
                 const contains = parentNode.classList.contains("activated");
