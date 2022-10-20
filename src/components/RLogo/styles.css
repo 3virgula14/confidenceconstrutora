@@ -95,13 +95,15 @@ title{
 
 #LogoNavigator #img.activated img {
     width: 300px;
+    height: auto;
 }
 #LogoNavigator #img.activated ul{
     margin-left: 30%;
 }
 
 #LogoNavigator #img img{
-    position: absolute;
+    transition: all 0.25s ;
     width: 50px;
+    height: 44px;
 }
 
