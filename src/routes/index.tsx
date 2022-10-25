@@ -10,7 +10,6 @@ export default component$(() => {
   const state = useStore({
     dataIndex: 1,
     dataIndexAttribute: "title",
-    dataType: "portfolio"
   })
 
   useContextProvider(NavigationContext, state);
